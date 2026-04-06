@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Snake Game</h1>
+    <div class="score-board" style="font-weight: bold;">SCORE　:　<span id="score">0</span></div>
+
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div id="gameOverModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>GAME OVER</h2>
+            <p>최종 점수: <span id="finalScore">0</span></p>
+            <button onclick="resetGame()">다시 시작</button>
+        </div>
+    </div>
+
+    <div class="score-board" style="display: flex; justify-content: space-between; width: 300px;">
+        <span style="color: #ff4757; font-weight: bold;">
+            ❤️ : <span id="lives">3 / 3</span>
+        </span>
+
+        <span>|</span>
+
+        <span style="color: #ffd700; font-weight: bold;">
+            🏆 BEST : <span id="highScore">0</span>
+        </span>
+
+        <span id="score" style="display: none;">0</span>
+        <span id="hits" style="display: none;">0</span>
+    </div>
+
+    <div class="controls-hint">※ 방향키를 사용하여 이동하세요.</div>
+
+    <footer>
+        <p> © 2025 Created by <strong>Mino</strong></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

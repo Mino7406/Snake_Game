@@ -1,0 +1,136 @@
+/* 기본 페이지 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* 제목 스타일 */
+h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #e94560;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 점수판 스타일 */
+.score-board {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    background: #16213e;
+    padding: 10px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    /* 내용물 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 게임 캔버스(화면) 스타일 */
+canvas {
+    background-color: #0f3460;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 4px solid #e94560;
+}
+
+/* 하단 안내 문구 */
+.controls-hint {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+/* --- 게임 오버 디자인 --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* 시작 시 숨기기 클래스 */
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #e94560;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+}
+
+.modal-content h2 {
+    color: #e94560;
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+}
+
+.modal-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.modal-content button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05);
+}
+
+/* 깜빡임 애니메이션 */
+@keyframes blinker {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* 이 클래스가 붙으면 깜빡임 */
+.blink {
+    animation: blinker 0.2s linear infinite;
+    border-color: #ff4757;
+}
+
+/* 푸터 스타일 */
+footer {
+    position: fixed; 
+    bottom: 15px;   
+    width: 100%;     
+    text-align: center; 
+    font-size: 0.8rem;  
+    color: #535c68;     
+    font-family: sans-serif;
+}
+
+footer strong {
+    color: #e94560; 
+}
